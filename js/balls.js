@@ -10,9 +10,9 @@ let circles = [], booms = [], arrBonus = [], same = []
 let nbrTime = 90,countPoints = 0, bestScore = 0,  progress = 0
 const colors = ['#FF1818', '#F4E104', '#029DFF','#E018FF']
 const srcSoundSelect = "audio/selected.mp3"
-const srcSoundBoom = "audio/balls/sbomb.mp3"
-const srcSoundBonus = "audio/balls/bonus.mp3"
-const srcSoundEnd = "audio/balls/end.mp3"
+const srcSoundBoom = "audio/sbomb.mp3"
+const srcSoundBonus = "audio/bonus.mp3"
+const srcSoundEnd = "audio/end.mp3"
 const srcSoundBigBoom = "audio/bigBoom.mp3"
 
 const random = (max=1, min=0) => Math.random() * (max - min) + min;
