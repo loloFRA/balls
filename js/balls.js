@@ -80,8 +80,8 @@ class Boom {
 		ctx.closePath()
 	}	 
 	update() {
-		this.x += 2*Math.cos(this.a)
-		this.y += 2*Math.sin(this.a)
+		this.x += 0.0001*Math.cos(this.a)*lastTimeCalled
+		this.y += 0.0001*Math.sin(this.a)*lastTimeCalled
 		this.draw()
 	}
 }
@@ -366,6 +366,7 @@ const init = () => {
 	c.width = W = innerWidth 
 	c.height = H = innerHeight
 	ctx = canvas.getContext("2d")
+	lastTimeCalled = performance.now()
 	loadAudio()
 	createMatter()
 	createCircles()	
