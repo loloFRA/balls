@@ -6,6 +6,7 @@ body {
 	user-select: none;
 	-webkit-user-select : none;
 	font-family: 'Tomorrow', sans-serif;
+	overscroll-behavior: none;
 }
 #canvas {
 	position:fixed;
