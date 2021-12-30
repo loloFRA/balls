@@ -19,7 +19,7 @@ body {
 	z-index:1;
 }
 #rules{
-	position:absolute;
+	position:fixed;
 	width:100%;
 	height:100%;
 	top:0;left:0;
@@ -51,7 +51,7 @@ body {
 	left:20px;
 	color:white;
 	font-size: 1.5em;
-	z-index:3;
+	z-index:2;
 }
 #timegame{
 	position:absolute;
@@ -63,7 +63,8 @@ body {
 	color:white;
 	font-size:1.5em;
 	text-align:center;
-	transition:0.2s
+	transition:0.2s;
+	z-index:2;
 }
 #info{
 	position:absolute;
@@ -72,6 +73,7 @@ body {
 	color:white;
 	font-size:1.5em;
 	transition:0.1s;
+	z-index:2;
 }
 #Fps {
 	position: absolute;
@@ -82,6 +84,7 @@ body {
 	flex-direction: inline;
 	align-items:center;
 	font-size: 0.6em;
+	z-index:2;
 }
 #nbrfps{
 	background-color:rgba(100,100,100,0.2);
@@ -93,6 +96,7 @@ body {
 	border-radius:50% ;
 	margin-left:5px;
 	font-size: 1.5em;
+	z-index:2;
 }
 #endgame{
 	position:absolute;
@@ -107,7 +111,9 @@ body {
 	backdrop-filter: blur(20px);
 	text-align:center;
 	font-size:2em;
+	z-index:3;
 }
 #bestscore, #score{
-	font-size:0.7em;margin:5px
+	font-size:0.7em;
+	margin:5px;
 }
