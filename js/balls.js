@@ -363,7 +363,7 @@ const loadAudio = () => {
 
 const init = () => {
 	c = document.getElementById("canvas");
-	c.width = W = innerWidth > innerHeight ? innerHeight : innerWidth
+	c.width = W = innerWidth 
 	c.height = H = innerHeight
 	ctx = canvas.getContext("2d")
 	loadAudio()
