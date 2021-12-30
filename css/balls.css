@@ -1,4 +1,8 @@
-html { overflow-y: hidden; }
+html, body { 
+	overflow-y: hidden;
+	position:fixed;
+	overscroll-behavior: none;
+}
 body {
 	margin:0;padding:0;
 	overflow:hidden;
@@ -6,7 +10,6 @@ body {
 	user-select: none;
 	-webkit-user-select : none;
 	font-family: 'Tomorrow', sans-serif;
-	overscroll-behavior: none;
 }
 #canvas {
 	position:fixed;
