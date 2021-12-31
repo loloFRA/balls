@@ -80,8 +80,8 @@ class Boom {
 		ctx.closePath()
 	}	 
 	update() {
-		this.x += 0.0001*Math.cos(this.a)*lastTimeCalled
-		this.y += 0.0001*Math.sin(this.a)*lastTimeCalled
+		this.x += 3*Math.cos(this.a)
+		this.y += 3*Math.sin(this.a)
 		this.draw()
 	}
 }
@@ -250,7 +250,7 @@ const checkBoom = () => {
 const animBooms = () => {
 	for(let i = booms.length-1; i>=0; i--){
 		booms[i].update()
-		booms[i].rad-=0.5
+		booms[i].rad-=0.75
 		if(booms[i].rad <=0.6)booms.splice(i, 1); 								   
 	} 
 }
@@ -258,7 +258,7 @@ const animBooms = () => {
 const animBonus = () => {
 	for(let i = arrBonus.length-1; i>=0; i--){
 		arrBonus[i].update()
-		arrBonus[i].sizeFont-=0.5
+		arrBonus[i].sizeFont-=0.75
 		arrBonus[i].y-=1
 		if(arrBonus[i].sizeFont <=10)arrBonus.splice(i, 1); 								   
 	} 
@@ -283,7 +283,7 @@ const blastStar = (x, y, sizeFont, a) => {
 }
 
 const createEffet = () => {
-	progress+=15;
+	progress+=20;
 	blastRings(W/2, H/2, progress, 10, "white");
 	blastRings(W/2, H/2, progress - 30, 15, "yellow");
 	blastRings(W/2, H/2, progress - 50, 20, "orange");
