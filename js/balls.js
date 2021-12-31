@@ -429,6 +429,7 @@ const eventsListener = () => {
 		move=true;	   
 	});
 	c.addEventListener("touchmove", function(event){
+		event.preventDefault();
 		if(move){
 			let touch = event.changedTouches[0];
 			let touchX = parseInt(touch.clientX);
