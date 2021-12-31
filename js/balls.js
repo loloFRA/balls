@@ -361,10 +361,18 @@ const loadAudio = () => {
 	createjs.Sound.registerSound(srcSoundBigBoom, 'soundbigboom');
 }
 
-const init = () => {
-	c = document.getElementById("canvas");
+const initWidthHeight = () => {
 	c.width = W = innerWidth 
 	c.height = H = innerHeight
+	if(innerWidth > innerHeight){
+        	c.width = W = innerHeight*0.6
+        	container.style.width = W + "px"
+    	}
+}
+
+const init = () => {
+	c = document.getElementById("canvas");
+	initWidthHeight()
 	ctx = canvas.getContext("2d")
 	lastTimeCalled = performance.now()
 	loadAudio()
