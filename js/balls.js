@@ -22,12 +22,17 @@ const calcFPS = () => {
 	lastTimeCalled = performance.now()
 	nbrfps.innerText =  Math.round(1000 / dt);
 }
-
-class Ball{
-	constructor(x, y, rad, bonus){
+class Dot{
+	constructor(x, y, rad) {
 		this.x = x;
 		this.y = y;
 		this.rad = rad;
+	}	
+}
+
+class Ball extends Dot{
+	constructor(x, y, rad, bonus){
+		super(x,y,rad)
 		this.bonus = bonus || null
 		this.mq = ~~random(colors.length)
 		this.c = colors[this.mq]
@@ -64,11 +69,9 @@ class Ball{
 	}
 }
 
-class Boom {
+class Boom extends Dot {
 	constructor(x,y,rad,color) {
-		this.x = x
-		this.y = y
-		this.rad = rad
+		super(x,y,rad)
 		this.color = color
 		this.a = random(2*Math.PI)
 	}
