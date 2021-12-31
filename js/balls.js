@@ -472,6 +472,5 @@ const eventsListener = () => {
 			c.style.webkitFilter = "blur(0px)";
 		}
 	});
-	window.onscroll = function () { window.scrollTo(0, 0); };
 
 };
