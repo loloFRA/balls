@@ -12,14 +12,21 @@ body {
 	font-family: 'Tomorrow', sans-serif;
 	width:100%;
 	height:100%;
+	display: flex;
+    	justify-content:center;
+}
+#container{
+    	position:absolute;
+    	width:100%;
+    	height:100%;
 }
 #canvas {
-	position:fixed;
+	position:absolute;
 	top:0;	
 	z-index:1;
 }
 #rules{
-	position:fixed;
+	position:absolute;
 	width:100%;
 	height:100%;
 	top:0;left:0;
