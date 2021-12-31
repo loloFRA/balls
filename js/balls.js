@@ -1,8 +1,4 @@
-let Engine = Matter.Engine, 
-	World = Matter.World, 
-	Bodies = Matter.Bodies, 
-	engine, world;
-
+let Engine = Matter.Engine, World = Matter.World, Bodies = Matter.Bodies, engine, world;
 let W, H, c, ctx, mouse, touch, lastTimeCalled
 let ground, left, right, marginBorder = 20, rad;
 let move = false, lastSelected = null, gamePlay = true, checkBoxAudio = true, effetBigBoom = false, pause = false;
