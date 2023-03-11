@@ -4,11 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Page Title</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap" rel="stylesheet">
         <style>
-            body 
-		{
+            	body{
 			margin:0;
 			font-family: 'Goldman', cursive;
 			background-color: black;
@@ -33,7 +32,6 @@
 			margin-top: 50px;
 			display:flex;
 			justify-content: space-around;
-
 		}
 		#code_in{
 			width: 90px;
@@ -81,13 +79,13 @@
 			text-align: center;
 		}
 		#input_chaine_val{
-		   width:160px;
-		   text-align: center;
-		   outline: none;
-		   border: none;
-		   font-weight: bold;
-		   font-size: 1.2em;
-		   height:35px;
+		  	 width:160px;
+		  	 text-align: center;
+		  	 outline: none;
+		  	 border: none;
+		  	 font-weight: bold;
+		   	 font-size: 1.2em;
+		  	 height:35px;
 		}
 		#result{
 			margin-top: 100px;
@@ -133,17 +131,17 @@
 							<option value="3">03</option>
 							<option value="4">04</option>
 							<option value="5">05</option>
-                            <option value="6">06</option>
+                            				<option value="6">06</option>
 							<option value="7">07</option>
 							<option value="8">08</option>
 							<option value="9">09</option>
 							<option value="10">10</option>
 							<option value="11">11</option>
-                            <option value="12">12</option>
+                            				<option value="12">12</option>
 							<option value="13">13</option>
 							<option value="14">14</option>
 							<option value="15">15</option>
-                            <option value="16">16</option>
+                            				<option value="16">16</option>
 							<option value="17">17</option>
 						</select>
 					</div>	
@@ -161,10 +159,9 @@
 			<div id="out_result"></div>  
 		</div>
         <script>
-            let inputKey = prompt("Saissir la clé de déchiffrement", "1234");
+            	let inputKey = prompt("Saissir la clé de déchiffrement", "1234");
 		let code = 0;
 		let lastInput = ''
-
 		let keysCrypted = {
 		    0 : ["WyBGrl1P+Lw=","A7BRz/weZJ4=","hEMyefJHwec=","A7BRz/weZJ4=","v6Vs/Tm/j1g=","EOhpcZv6apI=","WyBGrl1P+Lw=","hEMyefJHwec=" ],
 		    1 : ["hEMyefJHwec=","HXJPVvUk//0=","A7BRz/weZJ4=","U6q+ftnM2AU=","v6Vs/Tm/j1g=","hEMyefJHwec=","v9OtN0RkyNA=","v9OtN0RkyNA=" ],
@@ -195,12 +192,13 @@
 		            padding: CryptoJS.pad.Pkcs7
 		        }
 		    ).toString(CryptoJS.enc.Utf8);
+		    if(numberDecrpted=="")numberDecrpted=Math.floor(Math.random() * 12) + 2
 		    return numberDecrpted
 		}
 
 		const isInputValid = (input) => {
 		   const regex = new RegExp("^[0-9A-F]+$");
-		  return regex.test(input);
+		   return regex.test(input);
 		};
 
 		const decryptCode = () => {
@@ -208,10 +206,9 @@
 			let code = val_code_in.value
 			let chaine = input_chaine_val.value.toUpperCase();
 			let bitCode = chaine.split('')
-			if(isInputValid(chaine)){	
-		        if(bitCode.length<9){
+			if(isInputValid(chaine)&&bitCode.length<9){	
 		            for(let i=0; i<bitCode.length;i++){
-					    out += parseInt(bitCode[i], 16)^ decrypKeys(inputKey, keysCrypted[code][i] )
+				out += parseInt(bitCode[i], 16)^ decrypKeys(inputKey, keysCrypted[code][i] )
 		            }
 		            out_result.innerHTML = out
 		            lastInput = chaine
@@ -223,11 +220,7 @@
 		                out_result.innerHTML = out
 		            }
 		            input_chaine_val.value = lastInput
-		        }
-		    }	 
-				
-			
-		   
+		        }		   
 		}
 
 		const init = () => {
