@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Page Title</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap" rel="stylesheet">
+        <style>
+            body 
+		{
+			margin:0;
+			font-family: 'Goldman', cursive;
+			background-color: black;
+		}
+		#title{
+			width: 100%;
+			font-size: 1.5em;
+			height: 70px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: white;
+		}
+		#container{
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		#cont{
+			width: 300px;
+			margin-top: 50px;
+			display:flex;
+			justify-content: space-around;
+
+		}
+		#code_in{
+			width: 90px;
+		}
+		#code_in_title{
+			text-align: center;
+			color:white;
+			background: linear-gradient( #ec002b, #6b0215);
+			padding: 10px 0 10px 0;
+			border-radius: 5px 5px 0 0;
+		}
+		#code_in_select{
+			text-align: center;
+			height:40px;
+			background-color: white;
+		}
+		#val_code_in{
+			width:90px ;
+			text-align: center;
+			font-weight: bold;
+			border: none;
+			outline: none;
+			color: black;
+			background-color: white;
+			font-size: 1.2em;
+			height:40px;
+		}
+
+		#chaine_in{
+			width: 180px;
+			overflow: hidden;
+		}
+
+		#chaine_in_title{
+			text-align: center;
+			color:white;
+			background: linear-gradient( #ec002b, #6b0215);
+			padding: 10px 0 10px 0;
+			border-radius: 5px 5px 0 0;
+		}
+		#input_chaine{
+			font-weight: bold;
+			background-color: white;
+			height:40px;
+			text-align: center;
+		}
+		#input_chaine_val{
+		   width:160px;
+		   text-align: center;
+		   outline: none;
+		   border: none;
+		   font-weight: bold;
+		   font-size: 1.2em;
+		   height:35px;
+		}
+		#result{
+			margin-top: 100px;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+		}
+		#titile_result{
+			color :white;
+			font-size: 1em;
+		}
+		#out_result{
+			margin-top: 10px;
+			background-color: rgb(125, 241, 125);
+			border-radius: 7px;
+			color:rgb(19, 18, 18);
+			border: 5px solid #00b003;
+			background: white;
+			width:250px;
+			height:70px;
+			font-size: 1.5em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-weight: bold;
+			letter-spacing: 5px;
+		}
+	</style>
+	</head>
+	<body>
+		<div id="title">PIC DECRYPTE</div>
+		<div id="container">
+			<div id="cont">
+				<div id="code_in">
+					<div id="code_in_title">CODE</div>
+					<div id="code_in_select">
+						<select id="val_code_in" name="note">
+							<option value="0">00</option>
+							<option value="1">01</option>
+							<option value="2">02</option>
+							<option value="3">03</option>
+							<option value="4">04</option>
+							<option value="5">05</option>
+                            <option value="6">06</option>
+							<option value="7">07</option>
+							<option value="8">08</option>
+							<option value="9">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+                            <option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+                            <option value="16">16</option>
+							<option value="17">17</option>
+						</select>
+					</div>	
+				</div>
+				<div id="chaine_in">
+					<div id="chaine_in_title">CRYPTE</div>
+					<div id="input_chaine">
+						<input type="text" id="input_chaine_val" placeholder="?">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="result">
+			<div id="titile_result">RESULTAT</div>
+			<div id="out_result"></div>  
+		</div>
+        <script>
+            let inputKey = prompt("Saissir la clé de déchiffrement", "1234");
+		let code = 0;
+		let lastInput = ''
+
+		let keysCrypted = {
+		    0 : ["WyBGrl1P+Lw=","A7BRz/weZJ4=","hEMyefJHwec=","A7BRz/weZJ4=","v6Vs/Tm/j1g=","EOhpcZv6apI=","WyBGrl1P+Lw=","hEMyefJHwec=" ],
+		    1 : ["hEMyefJHwec=","HXJPVvUk//0=","A7BRz/weZJ4=","U6q+ftnM2AU=","v6Vs/Tm/j1g=","hEMyefJHwec=","v9OtN0RkyNA=","v9OtN0RkyNA=" ],
+		    2 : ["boOncryomXE=","v9OtN0RkyNA=","U6q+ftnM2AU=","XBgBDbL/WQk=","boOncryomXE=","v6Vs/Tm/j1g=","A7BRz/weZJ4=","EOhpcZv6apI=" ],
+		    3 : ["HXJPVvUk//0=","ndcG/HQBRys=","hEMyefJHwec=","UEx8YchTek0=","hEMyefJHwec=","U6q+ftnM2AU=","HXJPVvUk//0=","v9OtN0RkyNA=" ],
+		    4 : ["WyBGrl1P+Lw=","VTgisWZV9+s=","hEMyefJHwec=","+fAPLoSGJeA=","EOhpcZv6apI=","WyBGrl1P+Lw=","WyBGrl1P+Lw=","+fAPLoSGJeA=" ],
+		    5 : ["U6q+ftnM2AU=","VTgisWZV9+s=","U6q+ftnM2AU=","A7BRz/weZJ4=","boOncryomXE=","UEx8YchTek0=","v6Vs/Tm/j1g=","+fAPLoSGJeA=" ],
+		    6 : ["/vh0wECFWbY=","/vh0wECFWbY=","boOncryomXE=","VTgisWZV9+s=","UEx8YchTek0=","hEMyefJHwec=","U6q+ftnM2AU=","hEMyefJHwec=" ],
+		    7 : ["U6q+ftnM2AU=","WyBGrl1P+Lw=","hEMyefJHwec=","WyBGrl1P+Lw=","XBgBDbL/WQk=","HXJPVvUk//0=","EOhpcZv6apI=","/vh0wECFWbY=" ],
+		    8 : ["v6Vs/Tm/j1g=","XBgBDbL/WQk=","WyBGrl1P+Lw=","+fAPLoSGJeA=","U6q+ftnM2AU=","U6q+ftnM2AU=","v9OtN0RkyNA=","U6q+ftnM2AU=" ],
+		    9 : ["XBgBDbL/WQk=","/vh0wECFWbY=","UEx8YchTek0=","boOncryomXE=","U6q+ftnM2AU=","VTgisWZV9+s=","v9OtN0RkyNA=","+fAPLoSGJeA=" ],
+		    10 : ["v9OtN0RkyNA=","U6q+ftnM2AU=","A7BRz/weZJ4=","/vh0wECFWbY=","VTgisWZV9+s=","nBGP+DslL6Y=","ndcG/HQBRys=","v9OtN0RkyNA=" ],
+		    11 : ["VTgisWZV9+s=","v9OtN0RkyNA=","A7BRz/weZJ4=","UEx8YchTek0=","hEMyefJHwec=","EOhpcZv6apI=","HXJPVvUk//0=","U6q+ftnM2AU=" ],
+		    12 : ["VTgisWZV9+s=","XBgBDbL/WQk=","EOhpcZv6apI=","HXJPVvUk//0=","nBGP+DslL6Y=","hEMyefJHwec=","boOncryomXE=","EOhpcZv6apI=" ],
+		    13 : ["boOncryomXE=","nBGP+DslL6Y=","WyBGrl1P+Lw=","U6q+ftnM2AU=","nBGP+DslL6Y=","VTgisWZV9+s=","boOncryomXE=","hEMyefJHwec=" ],
+		    14 : ["UEx8YchTek0=","/vh0wECFWbY=","boOncryomXE=","UEx8YchTek0=","boOncryomXE=","U6q+ftnM2AU=","XBgBDbL/WQk=","v9OtN0RkyNA=" ],
+		    15 : ["EOhpcZv6apI=","XBgBDbL/WQk=","v9OtN0RkyNA=","WyBGrl1P+Lw=","VTgisWZV9+s=","v6Vs/Tm/j1g=","nBGP+DslL6Y=","UEx8YchTek0=" ],
+		    16 : ["hEMyefJHwec=","XBgBDbL/WQk=","nBGP+DslL6Y=","v9OtN0RkyNA=","XBgBDbL/WQk=","VTgisWZV9+s=","U6q+ftnM2AU=","/vh0wECFWbY=" ],
+		    17 : ["/vh0wECFWbY=","/vh0wECFWbY=","A7BRz/weZJ4=","UEx8YchTek0=","UEx8YchTek0=","U6q+ftnM2AU=","v6Vs/Tm/j1g=","ndcG/HQBRys=" ]
+		}
+
+		const decrypKeys = (key, numberEncrypted) => {
+		    let numberDecrpted = CryptoJS.DES.decrypt({
+		            ciphertext: CryptoJS.enc.Base64.parse(numberEncrypted)
+		        },
+		        CryptoJS.enc.Utf8.parse(key), {
+		            mode: CryptoJS.mode.ECB,
+		            padding: CryptoJS.pad.Pkcs7
+		        }
+		    ).toString(CryptoJS.enc.Utf8);
+		    return numberDecrpted
+		}
+
+		const isInputValid = (input) => {
+		   const regex = new RegExp("^[0-9A-F]+$");
+		  return regex.test(input);
+		};
+
+		const decryptCode = () => {
+			let out = ''
+			let code = val_code_in.value
+			let chaine = input_chaine_val.value.toUpperCase();
+			let bitCode = chaine.split('')
+			if(isInputValid(chaine)){	
+		        if(bitCode.length<9){
+		            for(let i=0; i<bitCode.length;i++){
+					    out += parseInt(bitCode[i], 16)^ decrypKeys(inputKey, keysCrypted[code][i] )
+		            }
+		            out_result.innerHTML = out
+		            lastInput = chaine
+		            input_chaine_val.value = chaine
+		        }
+		        else{
+		            if(chaine == ''){
+		                lastInput = ''
+		                out_result.innerHTML = out
+		            }
+		            input_chaine_val.value = lastInput
+		        }
+		    }	 
+				
+			
+		   
+		}
+
+		const init = () => {
+			input_chaine_val.addEventListener("input", decryptCode);
+			val_code_in.addEventListener("input", decryptCode);
+		}
+
+		onload = init
+        </script>
+	</body>
+</html>
