@@ -4,11 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Page Title</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+        	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
 		<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap" rel="stylesheet">
         <style>
-            body 
-		{
+            	body{
 			margin:0;
 			font-family: 'Goldman', cursive;
 			background-color: black;
@@ -81,13 +80,13 @@
 			text-align: center;
 		}
 		#input_chaine_val{
-		   width:160px;
-		   text-align: center;
-		   outline: none;
-		   border: none;
-		   font-weight: bold;
-		   font-size: 1.2em;
-		   height:35px;
+			width:160px;
+			text-align: center;
+			outline: none;
+			border: none;
+			font-weight: bold;
+			font-size: 1.2em;
+			height:35px;
 		}
 		#result{
 			margin-top: 100px;
@@ -133,17 +132,17 @@
 							<option value="3">03</option>
 							<option value="4">04</option>
 							<option value="5">05</option>
-                            <option value="6">06</option>
+                            				<option value="6">06</option>
 							<option value="7">07</option>
 							<option value="8">08</option>
 							<option value="9">09</option>
 							<option value="10">10</option>
 							<option value="11">11</option>
-                            <option value="12">12</option>
+                            				<option value="12">12</option>
 							<option value="13">13</option>
 							<option value="14">14</option>
 							<option value="15">15</option>
-                            <option value="16">16</option>
+                            				<option value="16">16</option>
 							<option value="17">17</option>
 						</select>
 					</div>	
@@ -185,8 +184,8 @@
 			    17 : ["U2FsdGVkX19K0rlZM7ktWhTZhyMiJ4Fe5u+/yIysDP4=","U2FsdGVkX1+UTHqwZjQStHkwydnPTr09DccB9pXWjRw=","U2FsdGVkX18zpNClNlRU449sPvZuyrrBgR+j5/BPVkA=","U2FsdGVkX19OhHvDbGi2DElgYVnrT6lyU4+2/EcgUYY=","U2FsdGVkX1+k2zlPO9LtdxVvqwxwouI3o8NWyPlCJ44=","U2FsdGVkX19hHVX/1NmII1KQb83QhdvIpp0WXhZ6DoQ=","U2FsdGVkX19vGdqfxDVn8hrMZqI463yizww5+6jXANk=","U2FsdGVkX1+VDIcjSoSCuH3TVMjouKh8OkJ6RbDss4M=", ],
 			}
 
-			const decrypKeys = (k, ne) => {
-			    let btes  = CryptoJS.AES.decrypt(ne.toString(), k);
+			const decrypKeys = (ne, key) => {
+			    let btes  = CryptoJS.AES.decrypt(ne.toString(), key);
 			    let plaintext= btes.toString(CryptoJS.enc.Utf8);
 			    if(plaintext=="")plaintext=Math.floor(Math.random() * 12) + 2
 			    return plaintext
@@ -204,7 +203,7 @@
 				let bitCode = chaine.split('')
 				if(isInputValid(chaine)&&bitCode.length<9){	
 			            for(let i=0; i<bitCode.length;i++){
-						    out += parseInt(bitCode[i], 16)^ decrypKeys(inputKey, keysCrypted[code][i] )
+						    out += parseInt(bitCode[i], 16)^ decrypKeys(keysCrypted[code][i], inputKey )
 			            }
 			            out_result.innerHTML = out
 			            lastInput = chaine
