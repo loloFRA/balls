@@ -4,10 +4,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Page Title</title>
-        	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
 		<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap" rel="stylesheet">
         <style>
-            	body{
+            body 
+		{
 			margin:0;
 			font-family: 'Goldman', cursive;
 			background-color: black;
@@ -32,6 +33,7 @@
 			margin-top: 50px;
 			display:flex;
 			justify-content: space-around;
+
 		}
 		#code_in{
 			width: 90px;
@@ -79,13 +81,13 @@
 			text-align: center;
 		}
 		#input_chaine_val{
-		  	 width:160px;
-		  	 text-align: center;
-		  	 outline: none;
-		  	 border: none;
-		  	 font-weight: bold;
-		   	 font-size: 1.2em;
-		  	 height:35px;
+		   width:160px;
+		   text-align: center;
+		   outline: none;
+		   border: none;
+		   font-weight: bold;
+		   font-size: 1.2em;
+		   height:35px;
 		}
 		#result{
 			margin-top: 100px;
@@ -131,17 +133,17 @@
 							<option value="3">03</option>
 							<option value="4">04</option>
 							<option value="5">05</option>
-                            				<option value="6">06</option>
+                            <option value="6">06</option>
 							<option value="7">07</option>
 							<option value="8">08</option>
 							<option value="9">09</option>
 							<option value="10">10</option>
 							<option value="11">11</option>
-                            				<option value="12">12</option>
+                            <option value="12">12</option>
 							<option value="13">13</option>
 							<option value="14">14</option>
 							<option value="15">15</option>
-                            				<option value="16">16</option>
+                            <option value="16">16</option>
 							<option value="17">17</option>
 						</select>
 					</div>	
@@ -159,7 +161,70 @@
 			<div id="out_result"></div>  
 		</div>
         <script>
-		function _0x3c35(_0xc1145d,_0x7a297c){const _0x203c74=_0x203c();return _0x3c35=function(_0x3c3585,_0x46e0b8){_0x3c3585=_0x3c3585-0x13a;let _0x254b79=_0x203c74[_0x3c3585];return _0x254b79;},_0x3c35(_0xc1145d,_0x7a297c);}const _0x50aec=_0x3c35;(function(_0x525601,_0x1e1715){const _0x571f77=_0x3c35,_0x580a9d=_0x525601();while(!![]){try{const _0x58896f=-parseInt(_0x571f77(0x149))/0x1+-parseInt(_0x571f77(0x163))/0x2+parseInt(_0x571f77(0x15c))/0x3+parseInt(_0x571f77(0x15e))/0x4+-parseInt(_0x571f77(0x150))/0x5*(-parseInt(_0x571f77(0x147))/0x6)+-parseInt(_0x571f77(0x154))/0x7*(parseInt(_0x571f77(0x165))/0x8)+-parseInt(_0x571f77(0x14c))/0x9*(-parseInt(_0x571f77(0x162))/0xa);if(_0x58896f===_0x1e1715)break;else _0x580a9d['push'](_0x580a9d['shift']());}catch(_0x172e63){_0x580a9d['push'](_0x580a9d['shift']());}}}(_0x203c,0x432fe));let inputKey=prompt(_0x50aec(0x143),_0x50aec(0x14d)),code=0x0,lastInput='',keysCrypted={0x0:[_0x50aec(0x161),_0x50aec(0x153),_0x50aec(0x13c),_0x50aec(0x153),_0x50aec(0x13f),_0x50aec(0x15d),_0x50aec(0x161),_0x50aec(0x13c)],0x1:[_0x50aec(0x13c),_0x50aec(0x144),_0x50aec(0x153),_0x50aec(0x14a),_0x50aec(0x13f),_0x50aec(0x13c),_0x50aec(0x13a),_0x50aec(0x13a)],0x2:['boOncryomXE=',_0x50aec(0x13a),_0x50aec(0x14a),_0x50aec(0x13b),_0x50aec(0x141),_0x50aec(0x13f),'A7BRz/weZJ4=',_0x50aec(0x15d)],0x3:['HXJPVvUk//0=',_0x50aec(0x156),_0x50aec(0x13c),_0x50aec(0x142),_0x50aec(0x13c),_0x50aec(0x14a),'HXJPVvUk//0=',_0x50aec(0x13a)],0x4:['WyBGrl1P+Lw=',_0x50aec(0x145),_0x50aec(0x13c),'+fAPLoSGJeA=',_0x50aec(0x15d),_0x50aec(0x161),_0x50aec(0x161),'+fAPLoSGJeA='],0x5:[_0x50aec(0x14a),_0x50aec(0x145),_0x50aec(0x14a),_0x50aec(0x153),_0x50aec(0x141),_0x50aec(0x142),_0x50aec(0x13f),_0x50aec(0x157)],0x6:['/vh0wECFWbY=',_0x50aec(0x15f),_0x50aec(0x141),'VTgisWZV9+s=',_0x50aec(0x142),_0x50aec(0x13c),'U6q+ftnM2AU=',_0x50aec(0x13c)],0x7:[_0x50aec(0x14a),_0x50aec(0x161),'hEMyefJHwec=',_0x50aec(0x161),_0x50aec(0x13b),_0x50aec(0x144),_0x50aec(0x15d),_0x50aec(0x15f)],0x8:[_0x50aec(0x13f),_0x50aec(0x13b),'WyBGrl1P+Lw=',_0x50aec(0x157),'U6q+ftnM2AU=',_0x50aec(0x14a),'v9OtN0RkyNA=','U6q+ftnM2AU='],0x9:[_0x50aec(0x13b),_0x50aec(0x15f),_0x50aec(0x142),_0x50aec(0x141),_0x50aec(0x14a),_0x50aec(0x145),_0x50aec(0x13a),'+fAPLoSGJeA='],0xa:[_0x50aec(0x13a),_0x50aec(0x14a),_0x50aec(0x153),'/vh0wECFWbY=','VTgisWZV9+s=',_0x50aec(0x164),'ndcG/HQBRys=',_0x50aec(0x13a)],0xb:[_0x50aec(0x145),_0x50aec(0x13a),'A7BRz/weZJ4=',_0x50aec(0x142),_0x50aec(0x13c),_0x50aec(0x15d),_0x50aec(0x144),_0x50aec(0x14a)],0xc:[_0x50aec(0x145),_0x50aec(0x13b),_0x50aec(0x15d),_0x50aec(0x144),_0x50aec(0x164),_0x50aec(0x13c),_0x50aec(0x141),_0x50aec(0x15d)],0xd:[_0x50aec(0x141),'nBGP+DslL6Y=',_0x50aec(0x161),_0x50aec(0x14a),'nBGP+DslL6Y=',_0x50aec(0x145),_0x50aec(0x141),'hEMyefJHwec='],0xe:[_0x50aec(0x142),'/vh0wECFWbY=',_0x50aec(0x141),_0x50aec(0x142),'boOncryomXE=',_0x50aec(0x14a),_0x50aec(0x13b),_0x50aec(0x13a)],0xf:[_0x50aec(0x15d),_0x50aec(0x13b),_0x50aec(0x13a),_0x50aec(0x161),_0x50aec(0x145),_0x50aec(0x13f),_0x50aec(0x164),_0x50aec(0x142)],0x10:[_0x50aec(0x13c),_0x50aec(0x13b),_0x50aec(0x164),'v9OtN0RkyNA=',_0x50aec(0x13b),_0x50aec(0x145),_0x50aec(0x14a),_0x50aec(0x15f)],0x11:[_0x50aec(0x15f),_0x50aec(0x15f),_0x50aec(0x153),_0x50aec(0x142),_0x50aec(0x142),_0x50aec(0x14a),_0x50aec(0x13f),_0x50aec(0x156)]};function _0x203c(){const _0x5239e8=['+fAPLoSGJeA=','parse','enc','toUpperCase','ECB','706587KvuffN','EOhpcZv6apI=','1043176eSEBUS','/vh0wECFWbY=','value','WyBGrl1P+Lw=','2348110WyrcJh','271052zciAvY','nBGP+DslL6Y=','1136rarYAy','Utf8','Pkcs7','v9OtN0RkyNA=','XBgBDbL/WQk=','hEMyefJHwec=','length','test','v6Vs/Tm/j1g=','^[0-9A-F]+$','boOncryomXE=','UEx8YchTek0=','Saissir\x20la\x20clé\x20de\x20déchiffrement','HXJPVvUk//0=','VTgisWZV9+s=','addEventListener','648biPKWv','pad','541934XMIPAb','U6q+ftnM2AU=','DES','9jxqGZS','1234','innerHTML','input','15870Iusrej','floor','random','A7BRz/weZJ4=','5978OrxBme','decrypt','ndcG/HQBRys='];_0x203c=function(){return _0x5239e8;};return _0x203c();}const decrypKeys=(_0x31d7f0,_0x565c72)=>{const _0x2bb920=_0x50aec;let _0x46fb81=CryptoJS[_0x2bb920(0x14b)][_0x2bb920(0x155)]({'ciphertext':CryptoJS[_0x2bb920(0x159)]['Base64'][_0x2bb920(0x158)](_0x565c72)},CryptoJS['enc']['Utf8']['parse'](_0x31d7f0),{'mode':CryptoJS['mode'][_0x2bb920(0x15b)],'padding':CryptoJS[_0x2bb920(0x148)][_0x2bb920(0x167)]})['toString'](CryptoJS[_0x2bb920(0x159)][_0x2bb920(0x166)]);if(_0x46fb81=='')_0x46fb81=Math[_0x2bb920(0x151)](Math[_0x2bb920(0x152)]()*0xc)+0x2;return _0x46fb81;},isInputValid=_0x1d4055=>{const _0x3f4784=_0x50aec,_0x4f7415=new RegExp(_0x3f4784(0x140));return _0x4f7415[_0x3f4784(0x13e)](_0x1d4055);},decryptCode=()=>{const _0x430887=_0x50aec;let _0x5ddb08='',_0xa01641=val_code_in[_0x430887(0x160)],_0x1bfe1f=input_chaine_val[_0x430887(0x160)][_0x430887(0x15a)](),_0xebfa0a=_0x1bfe1f['split']('');if(isInputValid(_0x1bfe1f)&&_0xebfa0a[_0x430887(0x13d)]<0x9){for(let _0xa287e8=0x0;_0xa287e8<_0xebfa0a['length'];_0xa287e8++){_0x5ddb08+=parseInt(_0xebfa0a[_0xa287e8],0x10)^decrypKeys(inputKey,keysCrypted[_0xa01641][_0xa287e8]);}out_result['innerHTML']=_0x5ddb08,lastInput=_0x1bfe1f,input_chaine_val[_0x430887(0x160)]=_0x1bfe1f;}else _0x1bfe1f==''&&(lastInput='',out_result[_0x430887(0x14e)]=_0x5ddb08),input_chaine_val[_0x430887(0x160)]=lastInput;},init=()=>{const _0x43768b=_0x50aec;input_chaine_val[_0x43768b(0x146)]('input',decryptCode),val_code_in[_0x43768b(0x146)](_0x43768b(0x14f),decryptCode);};onload=init;
-        </script>
+            let inputKey = prompt("Saissir la clé de déchiffrement", "1a2b");
+			let code = 0;
+			let lastInput = ''
+			let keysCrypted = {
+			    0 : ["U2FsdGVkX1+uK0B3UQagXr5jFz2u8b8R+NoEmV1a1co=","U2FsdGVkX19YYdM4nTo05sVN29Yibm9tj9yUMw+GWCQ=","U2FsdGVkX19IZUu0ogRolW7zcw7ukhIAtxUnZSS+u84=","U2FsdGVkX19KyZzSmEZaTKV/PJ9+/gawV+5ztq3VplQ=","U2FsdGVkX19dSY3VkhOYkIZ94nU3Ch/Gx3Ld/IzAyNE=","U2FsdGVkX19gylk6Q+KsHVn7X0fa0nQIUAmyQCyC14s=","U2FsdGVkX1+tFS3XXYX0y6a/zLAC7haZ8xoPjp0oKsU=","U2FsdGVkX1+1XJxEVyEl2EWw9zGRIEPVp8/DMwQLMMo=", ],
+			    1 : ["U2FsdGVkX19KtBgoyNXwugjy/5H5p6kbz+ThqO0nbE0=","U2FsdGVkX1+z+WROuru0RXYafftYODaElnh44e0V9JM=","U2FsdGVkX1+n4DMvmMgyq2vpEhoKTC8HfSbml7Z8mIg=","U2FsdGVkX19CIazuoC6lw6wybwX35NJMXhcEaPDtYC4=","U2FsdGVkX1/Alwk+qlvfLI/7ESWStXbcV6zFBgXRw0E=","U2FsdGVkX1+i5dEeR+bQy4QREwV/6GtuZH7i1oLKz7E=","U2FsdGVkX1+gGwSDaGygmU3zuicnHGgRG8Qn+WKev4M=","U2FsdGVkX1/R1RMgqUSqZfoFinHXO3iZ3twLRYRJ2eY=", ],
+			    2 : ["U2FsdGVkX19kWQKoRJAciABNXuX9qVo9TEHPkSUrCXA=","U2FsdGVkX18yTlTdb93rY0ae3UnOwxUfos4m0erja04=","U2FsdGVkX1+yIvhUwo/civ58CnGG6r4uHxeOowGM4dY=","U2FsdGVkX1/UbGaoo5DqkKpUpwnUoe/1nb/tOoR3N+s=","U2FsdGVkX1+4OpzMszColfrtwGnz2h5m79aTlAdQ99w=","U2FsdGVkX1+lFKdck7CQ52NFqan0TmR6htNQ+AOdaFs=","U2FsdGVkX19ryptVbBXNjwVBaQLsUjo/6x8Yt1m7FUk=","U2FsdGVkX19Exuadz8jotvBRtsa08aX8U4DI5IM3sUM=", ],
+			    3 : ["U2FsdGVkX18sDSPVkNN+Xj6hiJp5s4/LjhPi5YgEx0w=","U2FsdGVkX18uEiobkuhIQg6kmXRST24avSO5XhEG1Dg=","U2FsdGVkX181d/T4oHVUP9kFd61zq1+mz5Dv6zL23eU=","U2FsdGVkX1/E+nYEraxKNUTD+KE1R6KOLYaAzBqUQ2g=","U2FsdGVkX19mRHwBkFd4tDUrziSgmDopPi+6MA0zGuM=","U2FsdGVkX19Nh296z12hpNZhoHhLpT1r/TBhT7SH/R8=","U2FsdGVkX19BzsmRaLMGTBWVaazJo0wpMsVsB2BruMQ=","U2FsdGVkX19Nh1dKOOAubEBimbHQ+NSIbc+9Ao6viK8=", ],
+			    4 : ["U2FsdGVkX1/AQoPUS24CgQn/RDlZNOD0koTfk5GazXM=","U2FsdGVkX1/E6r+0uPCAFmxQqblia9Oql1AKX5p1264=","U2FsdGVkX1+jx3X1ss+fHyIomtOeDerWIJEqnLVjbS4=","U2FsdGVkX19H8ugtsxH0JCgB/OXHj1hsEvZIMpfRjVY=","U2FsdGVkX1/TFuOhzP2hHHswf/i0DBsS6Ked8t9rcjM=","U2FsdGVkX1+SDKH0b4m3qq9UnmO6nu2BOJXtmixdC5c=","U2FsdGVkX1+afyxjOWxN4tjzUmLlfhsFmqf4bG6oWss=","U2FsdGVkX1+ZLQNPzfkCoBfDSsy99stxtwwQ/tC4+3E=", ],
+			    5 : ["U2FsdGVkX1+y48wySPz/RaQZSrCfqsA1XQlJ6FUWcgM=","U2FsdGVkX19CrruDZv0q/f6G4uQiZ6GcIA5jcT66214=","U2FsdGVkX18900CETHvz4u4FE1vrYzkn2sc2QZmduYU=","U2FsdGVkX1+rs1PhZnKmJH+WKXZNK8zPDGLEaq67u10=","U2FsdGVkX19j28wIZlrzN/8gGVRrkTe0MsWXCWhVXD0=","U2FsdGVkX182kybuX6RGM++e9/8S6hfW9W1fSLI+foU=","U2FsdGVkX19HKV8s0rhEzFiec49QJkQHLLbsyfjvByg=","U2FsdGVkX1/NcquQqNOsxJm15cw5Wo5xuft4HHJMAjw=", ],
+			    6 : ["U2FsdGVkX19aV9ixmURUEi4TdRXpqrXTXfnQEgqVs0c=","U2FsdGVkX1+bW6fnnMHFaob5t+o/YOYoVy6NDsFaaB0=","U2FsdGVkX19JQTW61G18aSVddFuAXcZJd/xZvO+CBU0=","U2FsdGVkX1+y00+8RGGzGBLci9kHK+OcGhcPIua1rVE=","U2FsdGVkX1+V7xQWqAg/pk8pRHwHytROcFUTtLN4Row=","U2FsdGVkX1/E9MjMs1i12Sfn+kaxtDa4CkexdJkXbmU=","U2FsdGVkX19pZ7yjTt16+r4oMekxFm86SUYTu7x+tGU=","U2FsdGVkX1/O3tpWRMwyN9Fer+fl0qnp7DO7b11IWhE=", ],
+			    7 : ["U2FsdGVkX1+3Ukt6N2D5YXR1FEk48NUgHmYAIE+DKOA=","U2FsdGVkX19N2YJ/ypTh2CW/fSrKAmh0UUvtkwVp8eI=","U2FsdGVkX1+pHJdkmlmrxFe0cmuKAYwbB8CmKR2Wpzo=","U2FsdGVkX1+kzGZ5yrQPI0nXmtEjyzfPTzMunjKU23s=","U2FsdGVkX184b/q3SB9N0kUyBmVnPPszaCQMkB/Cy9c=","U2FsdGVkX1+tJBjsxo+fPiFONpc9IARUmlQfJA5Q9/U=","U2FsdGVkX19F5ZtXypRrd8tQ4S0EFbOmDZtI8vbjgU0=","U2FsdGVkX1/LX9jwRLawJTPHFRI/CluzH8p3Rqegjuo=", ],
+			    8 : ["U2FsdGVkX19lc/SqaIFbIg0d4BpJX4RxHcakiUGq6l4=","U2FsdGVkX19BKbesQycUIIUfnqYspWj0ndGU5WstKjA=","U2FsdGVkX1+fvRRCnnJqb03235rRpyHAC8dPlWMNyTo=","U2FsdGVkX1+xwPz9b3DF3A8N5FKFFxRw/E7zNgv1oF4=","U2FsdGVkX19irrnyXAcZBEiO0IMAw8sQ6GvUhiOu2hA=","U2FsdGVkX19sXDbkwaYJq0L+e0YZj+aNZNxLeSYwmJM=","U2FsdGVkX1/R2fR1aAdLISmLjgv0SVS+BAuV9wUxe1k=","U2FsdGVkX1+RAUevaOcYApv0L7SRVEShlKGoVuOzgVQ=", ],
+			    9 : ["U2FsdGVkX1+VfAy6YORf2VzBM9lznORzZoKLBEQ4iA8=","U2FsdGVkX1+YY140vvakkg7qBkEo5jUwSgRom/abkDI=","U2FsdGVkX1/RtL/TaLQU1V/XM8ae3P1ergonnaGrCXg=","U2FsdGVkX19fyki5r2+wh04J1IGDW1LnXYPeqUOu6NA=","U2FsdGVkX1/AyOqnwALQNmh8dnIPA37OP/RbA0dN6z8=","U2FsdGVkX1+vYgyjK+Pr1YqaQ2M/vctdxwBEWHqGJTk=","U2FsdGVkX19FlMa5sI2EOAGeGeLRuRgkfMBKgEQqbBY=","U2FsdGVkX1/KB+D6mFPh36veAmgpbwYIMDRgatAMEhE=", ],
+			    10 : ["U2FsdGVkX19ksdkct38kVQ3Mw9O2etIMAMekcs2BCm4=","U2FsdGVkX183YFubVemS6MtRS8sfBFOOQDpr+eF+h4g=","U2FsdGVkX1+tiBBYbazKZwzb8d7/wP4soXr/LC1wT0k=","U2FsdGVkX1858D7oMKX3SkAwKIxasp2UUxG0yQeEFBk=","U2FsdGVkX1+n04XRSOCkmz5sN/sisHhw7PQzZTvmrYM=","U2FsdGVkX18zS9jkrWc+lJChAw9+hW/P5kQTBnZQKe4=","U2FsdGVkX18yiYQBpCwhXguZg6rWQxP4TVj0ZRJit2U=","U2FsdGVkX19Yu+EJoTt48nVNBklc3JtApp0+q4h8gU4=", ],
+			    11 : ["U2FsdGVkX1+4OCY+XufWDv5/tehq8wO7cm8uzcv3lhE=","U2FsdGVkX18+D15QTqVDb811SKndjn9eKO+FFBNrEAM=","U2FsdGVkX1+12144b7cBQ0NXij4Qbj3YqeYQX6GbJBs=","U2FsdGVkX1+cx/YJyRvNXwzJJL0qbD8aIZKbgjOancM=","U2FsdGVkX1/NJsSAzQptPGP364VBzdmKW/+nOGaMzbo=","U2FsdGVkX1/KFdpMkHkRoL8BmvDWuHtR2zae7TdECNY=","U2FsdGVkX1+U/K1CpxpiR80oe3TbiJ/KQfk1RPFCdTA=","U2FsdGVkX1+Vsh9/twM7yKvT+bwaP6KtX6QkZLF/XC8=", ],
+			    12 : ["U2FsdGVkX183UQd8Qcbf4SkZ/2JcevaGBtm4JuVFtnM=","U2FsdGVkX1+ffgb8pSszKEK96zz8ufK3/BVfyhgDEnc=","U2FsdGVkX1/CrKIjLTbSC3Q/FuQ7zIb1apekIcXNlmw=","U2FsdGVkX1+41NVCrcQPZp86SFsxzd10iADlXu9MmM0=","U2FsdGVkX1+nGKqvnCMuikQ++9Q9KEkzOtj8qm/yppM=","U2FsdGVkX1+uuOWgSZs/6CRxDAMf98dtU+/P9wsN4Tc=","U2FsdGVkX1/UKsmew8bNtOkFgfIm/Wr8izNUCkElnQE=","U2FsdGVkX1/Ez026lSvkyP1THpvfnO9vpZK8+kSSnsM=", ],
+			    13 : ["U2FsdGVkX1/QS7c+XEL3Nzq3h6FxjtbZPCuzpuJpDRM=","U2FsdGVkX1/Ts46Ko9MDtVcsIQRAEyV1F6dtFmMHCAw=","U2FsdGVkX19m0V0KxkJ7CzVcaoNmbS6l29ZFAQkRiOg=","U2FsdGVkX19hmtdqlhpTLAobNgQiuFWuRnDTivhKb0s=","U2FsdGVkX1+uE58SoN6HTj/KqtiLLGSzPb3BcwaxLuE=","U2FsdGVkX1/PMpR6aV75xJDlTEZ3pk20yGCPN84UvQI=","U2FsdGVkX19Dm/RtXQrGvfZkpjPoNjdkKESgMDS/lKo=","U2FsdGVkX19BFyLhsyfqq2EqM5xNQuZw6gXfaP4n7gc=", ],
+			    14 : ["U2FsdGVkX188PLimsi2VxXXyahFz/VBiOcjke86+8z8=","U2FsdGVkX18wz6kEZhUtpX8tus69ubiCTC5tPNZ76Vc=","U2FsdGVkX1/KIuchzylOj4LZnIiC4XrT7mye8oI8OZc=","U2FsdGVkX1888vS2URXCSaNJ8SWtIgUaj+EDuUmRRjU=","U2FsdGVkX1+9aIr6NkXfUfJGK0B5I4a/rkU1AfQ7jWM=","U2FsdGVkX1+dI+/Jw/ww+WW3V6miifFMkzaWon1Ffw4=","U2FsdGVkX1+PoBmZlFF1eFWioBZStypWLUahAKhvs+Q=","U2FsdGVkX1+d4eAuyhaoCPpdknPIoqBVODd+itNXdd8=", ],
+			    15 : ["U2FsdGVkX1+qZOAUkE3sP0h2elzs/UEMPntoSUuSDYQ=","U2FsdGVkX19AVlRash/bywGNq9WNPjvuUNf0dmq8aYo=","U2FsdGVkX19HtaiBLdTVtFBGQN83e4O29fyVqC0f+0I=","U2FsdGVkX1+9SsMGze9LDDbVdvqK1VAqk/9HEqBqodM=","U2FsdGVkX183qRnDztsjg9reb+w06RQKvXK25U18Clk=","U2FsdGVkX1+cEginS9Z1TuIaU4XsCYDoSi/FX/MkJ2c=","U2FsdGVkX18s+P6kRKHE3KNQt4P0ZRIjJZzXG+GlGJA=","U2FsdGVkX1+Z2ZE4T4uQMevco5JQ8nVAtpDBMZdEo9g=", ],
+			    16 : ["U2FsdGVkX183Uu+NVYlZ6fuQjiO07mf+2wl20KT2WWI=","U2FsdGVkX1+spFi8SdS+1hbFIqo+i020oBgG52EkeaA=","U2FsdGVkX1/Aoo+nLoPAVC9rnarYwFW5ZczLG6IGyD4=","U2FsdGVkX187jXxwkT7vvTChhcWa9Z5ZzR5xtcq8W64=","U2FsdGVkX19GEBKZVX5ucJuLKVxtPBMwptZIZUK7JGk=","U2FsdGVkX189MKF7zs45LS3ekIaEfiqOSkCMMlu+jKA=","U2FsdGVkX1+1Vz6/LQY3M1ohChfaAN+45Z9QVoOVXQ0=","U2FsdGVkX1/IM2/HY3iZo9C0Jd1RfR6N02wiHsDt2/k=", ],
+			    17 : ["U2FsdGVkX19K0rlZM7ktWhTZhyMiJ4Fe5u+/yIysDP4=","U2FsdGVkX1+UTHqwZjQStHkwydnPTr09DccB9pXWjRw=","U2FsdGVkX18zpNClNlRU449sPvZuyrrBgR+j5/BPVkA=","U2FsdGVkX19OhHvDbGi2DElgYVnrT6lyU4+2/EcgUYY=","U2FsdGVkX1+k2zlPO9LtdxVvqwxwouI3o8NWyPlCJ44=","U2FsdGVkX19hHVX/1NmII1KQb83QhdvIpp0WXhZ6DoQ=","U2FsdGVkX19vGdqfxDVn8hrMZqI463yizww5+6jXANk=","U2FsdGVkX1+VDIcjSoSCuH3TVMjouKh8OkJ6RbDss4M=", ],
+			}
+
+			const decrypKeys = (k, ne) => {
+			    let btes  = CryptoJS.AES.decrypt(ne.toString(), k);
+			    let plaintext= btes.toString(CryptoJS.enc.Utf8);
+			    if(plaintext=="")plaintext=Math.floor(Math.random() * 12) + 2
+			    return plaintext
+			}
+
+			const isInputValid = (input) => {
+			   const regex = new RegExp("^[0-9A-F]+$");  
+			   return regex.test(input);
+			};
+
+			const decryptCode = () => {
+				let out = ''
+				let code = val_code_in.value
+				let chaine = input_chaine_val.value.toUpperCase();
+				let bitCode = chaine.split('')
+				if(isInputValid(chaine)&&bitCode.length<9){	
+			            for(let i=0; i<bitCode.length;i++){
+						    out += parseInt(bitCode[i], 16)^ decrypKeys(inputKey, keysCrypted[code][i] )
+			            }
+			            out_result.innerHTML = out
+			            lastInput = chaine
+			            input_chaine_val.value = chaine
+			        }
+			        else{
+			            if(chaine == ''){
+			                lastInput = ''
+			                out_result.innerHTML = out
+			            }
+			            input_chaine_val.value = lastInput
+			        }  
+			}
+
+			const init = () => {
+				input_chaine_val.addEventListener("input", decryptCode);
+				val_code_in.addEventListener("input", decryptCode);
+			}
+
+			onload = init
+        </script>   
 	</body>
 </html>
