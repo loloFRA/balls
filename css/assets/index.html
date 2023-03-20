@@ -4,11 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Page Title</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+        	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
 		<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap" rel="stylesheet">
         <style>
-        body 
-{
+body{
 	margin:0;
 	font-family: 'Goldman', cursive;
 	background-color: black;
@@ -23,20 +22,20 @@
 	color: white;
 }
 #container{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    	width: 100%;
+    	display: flex;
+    	align-items: center;
+   	 justify-content: center;
 }
 #chaine_in{
-    margin-top:50px;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
+    	margin-top:50px;
+   	 width: 200px;
+    	display: flex;
+    	flex-direction: column;
 	overflow: hidden;
 }
 #chaine_in_title{
-    width: 200px;
+    	width: 200px;
 	text-align: center;
 	color:white;
 	background: linear-gradient( #ec002b, #6b0215);
@@ -44,14 +43,14 @@
 	border-radius: 5px 5px 0 0;
 }
 #input_chaine_val{
-    font-weight: bold;
+    	font-weight: bold;
 	background-color: white;
 	height:40px;
 	text-align: center;
-    outline: none;
-    border: none;
-    width: 200px;
-    font-size: 1.3em;
+    	outline: none;
+    	border: none;
+   	 width: 200px;
+    	font-size: 1.3em;
 }
 #result{
 	margin-top: 100px;
@@ -83,21 +82,21 @@
 }
 	</style>
 	</head>
-		<body>
-        <div id="title">BiBus DECRYPTE</div>
-        <div id="container">
-            <div id="chaine_in">   
-                <div id="chaine_in_title">CRYPTE</div>
-                <div id="input_chaine">
-                    <input type="text" id="input_chaine_val" placeholder="?">
-                </div>
-            </div>
-        </div>
-        <div id="result">
+	<body>
+        	<div id="title">BiBus DECRYPTE</div>
+        	<div id="container">
+            		<div id="chaine_in">   
+                		<div id="chaine_in_title">CRYPTE</div>
+                		<div id="input_chaine">
+                    			<input type="text" id="input_chaine_val" placeholder="?">
+                		</div>
+            		</div>
+        	</div>
+        	<div id="result">
 			<div id="titile_result">RESULTAT</div>
 			<div id="out_result"></div>  
 		</div>
-		 <script>    
+	<script>    
 
 let inputKey = prompt("Saissir la clé de déchiffrement", "1234");
 
@@ -155,7 +154,6 @@ const decryptCode = () => {
 }
 const init = () => {
 	input_chaine_val.addEventListener("input", decryptCode);
-
 }
 
 onload = init
